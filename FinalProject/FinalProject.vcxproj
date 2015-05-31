@@ -81,6 +81,9 @@
     <None Include="OpenCV_Debug.props" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FaceBoxFrameHandler.cpp" />
+    <ClCompile Include="FaceDetectionFrameHandler.cpp" />
+    <ClCompile Include="FaceTextFrameHandler.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +96,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="cap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DummyFrameHandler.h" />
+    <ClInclude Include="FaceBoxFrameHandler.h" />
+    <ClInclude Include="FaceDetectionFrameHandler.h" />
+    <ClInclude Include="FaceTextFrameHandler.h" />
+    <ClInclude Include="FrameHandler.h" />
+    <ClInclude Include="Keys.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
