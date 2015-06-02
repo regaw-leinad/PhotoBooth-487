@@ -81,10 +81,12 @@
     <None Include="OpenCV_Debug.props" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Face.cpp" />
     <ClCompile Include="FaceBoxFrameHandler.cpp" />
     <ClCompile Include="FaceDetectionFrameHandler.cpp" />
     <ClCompile Include="FaceTextFrameHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="haarcascade_eye.xml" />
@@ -99,11 +101,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DummyFrameHandler.h" />
+    <ClInclude Include="Face.h" />
     <ClInclude Include="FaceBoxFrameHandler.h" />
     <ClInclude Include="FaceDetectionFrameHandler.h" />
     <ClInclude Include="FaceTextFrameHandler.h" />
     <ClInclude Include="FrameHandler.h" />
     <ClInclude Include="Keys.h" />
+    <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

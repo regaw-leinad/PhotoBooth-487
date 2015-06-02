@@ -11,6 +11,10 @@ public:
 	const static int KEY_NUM_3 = 51;
 	const static int KEY_NUM_4 = 52;
 	const static int KEY_NUM_5 = 53;
+	const static int KEY_NUM_6 = 54;
+	const static int KEY_NUM_7 = 55;
+	const static int KEY_NUM_8 = 56;
+	const static int KEY_NUM_9 = 57;
 
 	const static int KEY_A_LOWER = 97;
 	const static int KEY_Z_LOWER = 122;

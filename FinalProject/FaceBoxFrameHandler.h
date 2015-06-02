@@ -7,7 +7,7 @@ public:
 	FaceBoxFrameHandler() {}
 	~FaceBoxFrameHandler() {}
 
-	void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<cv::Rect> faces, const char *windowName);
+	void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<Face> faces, const char *windowName);
 
 	std::string getName() const;
 };

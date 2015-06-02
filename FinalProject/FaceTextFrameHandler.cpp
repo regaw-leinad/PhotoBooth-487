@@ -8,7 +8,7 @@ FaceTextFrameHandler::FaceTextFrameHandler() {
 	this->text = "";
 }
 
-void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<cv::Rect> faces, const char *windowName) {
+void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<Face> faces, const char *windowName) {
 	if (keyPressed == Keys::KEY_DELETE) {
 		if (this->text.length() > 0) {
 			this->text = this->text.substr(0, text.length() - 1);
@@ -26,7 +26,7 @@ void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &k
 	}
 
 	for (size_t i = 0; i < faces.size(); i++) {
-		Rect face = faces[i];
+		Rect face = faces[i].getFace();
 
 		int baseline = 0;
 		Size textSize = getTextSize(this->text, FONT_HERSHEY_SIMPLEX, 1.0, 3, &baseline);

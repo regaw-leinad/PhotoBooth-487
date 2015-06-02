@@ -18,13 +18,22 @@ FaceDetectionFrameHandler::FaceDetectionFrameHandler() {
 void FaceDetectionFrameHandler::handleFrame(cv::Mat &frame, const int &keyPressed, const char *windowName) {
 	if (this->loaded) {
 		// Do face detection
-		vector<Rect> faces;
+		vector<Rect> faceRects;
+		
 		Mat frameGrey;
 
 		cvtColor(frame, frameGrey, CV_BGR2GRAY);
 		equalizeHist(frameGrey, frameGrey);
 
-		this->faceCascade.detectMultiScale(frameGrey, faces, 1.1f, 6, 0 | CV_HAAR_SCALE_IMAGE, Size(50, 50));
+		this->faceCascade.detectMultiScale(frameGrey, faceRects, 1.1f, 6, 0 | CV_HAAR_SCALE_IMAGE, Size(50, 50));
+
+		vector<Face> faces;
+
+		for (size_t i = 0; i < faceRects.size(); i++) {
+			faces.push_back(Face(faceRects[i]));
+
+			// Add eye detection here if necessary
+		}
 
 		handleFaceDetectionFrame(frame, keyPressed, faces, windowName);
 	}
