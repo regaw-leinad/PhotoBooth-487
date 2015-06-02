@@ -86,6 +86,7 @@
     <ClCompile Include="FaceDetectionFrameHandler.cpp" />
     <ClCompile Include="FaceTextFrameHandler.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PhotoBooth487.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +108,7 @@
     <ClInclude Include="FaceTextFrameHandler.h" />
     <ClInclude Include="FrameHandler.h" />
     <ClInclude Include="Keys.h" />
+    <ClInclude Include="PhotoBooth487.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

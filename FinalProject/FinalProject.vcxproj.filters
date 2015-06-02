@@ -33,6 +33,9 @@
     <ClCompile Include="Face.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PhotoBooth487.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="haarcascade_eye.xml">
@@ -87,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Face.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhotoBooth487.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
