@@ -13,6 +13,10 @@ public:
 	virtual ~FrameHandler() {}
 
 	virtual void handleFrame(cv::Mat &frame, const int &keyPressed, const char *windowName) = 0;
+
+	void onEnable();
+	void onDisable();
+
 	virtual std::string getName() const = 0;
 };
 

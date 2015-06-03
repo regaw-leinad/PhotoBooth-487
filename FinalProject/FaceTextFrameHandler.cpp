@@ -17,7 +17,6 @@ void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &k
 	}
 
 	if (keyPressed != Keys::KEY_NONE) {
-		cout << keyPressed << endl;
 		if (keyPressed == Keys::KEY_SPACE ||
 			keyPressed >= Keys::KEY_A_LOWER && keyPressed <= Keys::KEY_Z_LOWER ||
 			keyPressed >= Keys::KEY_A_UPPER && keyPressed <= Keys::KEY_Z_UPPER) {

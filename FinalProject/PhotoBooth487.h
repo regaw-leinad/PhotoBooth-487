@@ -11,10 +11,12 @@
 
 class PhotoBooth487 {
 public:
-	const char *WINDOW_NAME = "PhotoBooth487";
+	static const char *WINDOW_NAME;
 
 	PhotoBooth487(const int &camWidth, const int &camHeight);
 	~PhotoBooth487();
+
+	static void onMouseEvent(int eventCode, int x, int y, int flags, void *param);
 
 	void start();
 

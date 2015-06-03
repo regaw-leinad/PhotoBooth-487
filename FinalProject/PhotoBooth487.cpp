@@ -8,6 +8,8 @@
 using namespace std;
 using namespace cv;
 
+const char *PhotoBooth487::WINDOW_NAME = "PhotoBooth487";
+
 PhotoBooth487::PhotoBooth487(const int &camWidth, const int &camHeight) {
 	this->loaded = false;
 
@@ -56,6 +58,8 @@ void PhotoBooth487::start() {
 		return;
 	}
 
+	cvSetMouseCallback(WINDOW_NAME, onMouseEvent, NULL);
+
 	while (true) {
 		// Get key press
 		int keyPressed = waitKey(1);
@@ -86,6 +90,10 @@ void PhotoBooth487::start() {
 			imshow(WINDOW_NAME, frame);
 		}
 	}
+}
+
+void PhotoBooth487::onMouseEvent(int eventCode, int x, int y, int flags, void *param) {
+	cout << "Mouse event" << endl;
 }
 
 PhotoBooth487::~PhotoBooth487() {
