@@ -4,6 +4,7 @@
 #include "FaceTextFrameHandler.h"
 #include "HatOverlayFrameHandler.h"
 #include "EdgyFrameHandler.h"
+#include "ColorFilterFrameHandler.h"
 #include "FPS.h"
 
 #include <iostream>
@@ -53,7 +54,7 @@ void PhotoBooth487::initHandlers() {
 	this->frameHandlers[Keys::KEY_NUM_3] = new HatOverlayFrameHandler("cap.png");
 	this->frameHandlers[Keys::KEY_NUM_4] = new HatOverlayFrameHandler("top.png");
 	this->frameHandlers[Keys::KEY_NUM_5] = new EdgyFrameHandler;
-	this->frameHandlers[Keys::KEY_NUM_6] = currentFrameHandler;
+	this->frameHandlers[Keys::KEY_NUM_6] = new ColorFilterFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_7] = currentFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_8] = currentFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_9] = currentFrameHandler;

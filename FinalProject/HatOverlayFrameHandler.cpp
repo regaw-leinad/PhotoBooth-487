@@ -22,7 +22,7 @@ void HatOverlayFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int 
 		Mat hat(newSize, true);
 		resize(this->image, hat, newSize);
 
-		int newY = (faceRect.y - newSize.height) + (newSize.height * .3);
+		int newY = (faceRect.y - newSize.height) + (int)(newSize.height * .3);
 		overlayImage(frame, hat, faceRect.x, newY);
 	}
 }
