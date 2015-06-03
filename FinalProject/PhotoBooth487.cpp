@@ -11,13 +11,17 @@ using namespace cv;
 PhotoBooth487::PhotoBooth487(const int &camWidth, const int &camHeight) {
 	this->loaded = false;
 
+	cout << "Initializing capture device..." << endl;
 	if (!initCamera(camWidth, camHeight)) {
 		cerr << "[ERROR] Webcam not loaded successfully" << endl;
 		return;
 	}
 
+	cout << "Initializing display window..." << endl;
 	initWindow();
+	cout << "Initializing Frame Handlers..." << endl;
 	initHandlers();
+	cout << "PhotoBooth487 loaded successfully" << endl;
 
 	this->loaded = true;
 }
