@@ -1,5 +1,7 @@
 #include "FaceBoxFrameHandler.h"
 
+#include <iostream>
+
 using namespace std;
 using namespace cv;
 
@@ -9,6 +11,10 @@ void FaceBoxFrameHandler::handleFaceDetectionFrame(Mat &frame, const int &keyPre
 
 		rectangle(frame, face.getFace(), Scalar(0, 255, 0), 4);
 	}
+}
+
+void FaceBoxFrameHandler::onMouseEvent(int eventCode, int x, int y, int flags) {
+	cout << "FaceBoxFrameHandler Mouse Event" << endl;
 }
 
 string FaceBoxFrameHandler::getName() const {

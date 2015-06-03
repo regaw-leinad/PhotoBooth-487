@@ -13,6 +13,7 @@ public:
 	virtual ~FrameHandler() {}
 
 	virtual void handleFrame(cv::Mat &frame, const int &keyPressed, const char *windowName) = 0;
+	virtual void onMouseEvent(int eventCode, int x, int y, int flags) {}
 
 	void onEnable();
 	void onDisable();

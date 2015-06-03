@@ -2,6 +2,7 @@
 #include "DummyFrameHandler.h"
 #include "FaceBoxFrameHandler.h"
 #include "FaceTextFrameHandler.h"
+#include "FPS.h"
 
 #include <iostream>
 
@@ -33,7 +34,7 @@ bool PhotoBooth487::initCamera(const int &camWidth, const int &camHeight) {
 	cvSetCaptureProperty(this->camera, CV_CAP_PROP_FRAME_WIDTH, camWidth);
 	cvSetCaptureProperty(this->camera, CV_CAP_PROP_FRAME_HEIGHT, camHeight);
 
-	return this->camera;
+	return this->camera != NULL;
 }
 
 void PhotoBooth487::initWindow() {
@@ -62,7 +63,7 @@ void PhotoBooth487::start() {
 		return;
 	}
 
-	cvSetMouseCallback(WINDOW_NAME, onMouseEvent, NULL);
+	cvSetMouseCallback(WINDOW_NAME, onMouseEvent, this);
 
 	while (true) {
 		// Get key press
@@ -84,20 +85,22 @@ void PhotoBooth487::start() {
 		}
 
 		Mat frame = cvQueryFrame(this->camera);
-		flip(frame, frame, 1);
+		//flip(frame, frame, 1);
 
 		if (!frame.empty()) {
 			currentFrameHandler->handleFrame(frame, keyPressed, WINDOW_NAME);
 
 			// Put current frame handler in text
-			putText(frame, currentFrameHandler->getName() + " Frame Handler", Point(10, frame.rows - 10), FONT_HERSHEY_COMPLEX, 0.5, Scalar(127, 0, 0), 2);
+			putText(frame, currentFrameHandler->getName() + " Frame Handler", Point(10, frame.rows - 10), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(38, 121, 235), 1);
+			putText(frame, "FPS: " + to_string(FPS::getAverageFPS()), Point(frame.cols - 100, frame.rows - 10), FONT_HERSHEY_COMPLEX_SMALL, 1, Scalar(38, 121, 235), 1);
 			imshow(WINDOW_NAME, frame);
 		}
 	}
 }
 
 void PhotoBooth487::onMouseEvent(int eventCode, int x, int y, int flags, void *param) {
-	cout << "Mouse event" << endl;
+	PhotoBooth487 *photoBooth = (PhotoBooth487*)param;
+	photoBooth->currentFrameHandler->onMouseEvent(eventCode, x, y, flags);
 }
 
 PhotoBooth487::~PhotoBooth487() {

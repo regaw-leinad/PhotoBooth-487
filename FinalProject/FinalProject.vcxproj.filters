@@ -36,24 +36,12 @@
     <ClCompile Include="PhotoBooth487.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="haarcascade_eye.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
-    <Xml Include="haarcascade_eye_tree_eyeglasses.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
-    <Xml Include="haarcascade_frontalface_alt.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
-    <Xml Include="haarcascade_frontalface_alt_tree.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
-    <Xml Include="haarcascade_frontalface_default.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
-    <Xml Include="haarcascade_mcs_mouth.xml">
+    <Xml Include="lbpcascade_frontalface.xml">
       <Filter>Resource Files</Filter>
     </Xml>
   </ItemGroup>
@@ -93,6 +81,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PhotoBooth487.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -16,8 +16,6 @@ public:
 	PhotoBooth487(const int &camWidth, const int &camHeight);
 	~PhotoBooth487();
 
-	static void onMouseEvent(int eventCode, int x, int y, int flags, void *param);
-
 	void start();
 
 private:
@@ -29,5 +27,7 @@ private:
 	bool initCamera(const int &camWidth, const int &camHeight);
 	void initWindow();
 	void initHandlers();
+
+	static void onMouseEvent(int eventCode, int x, int y, int flags, void *param);
 };
 
