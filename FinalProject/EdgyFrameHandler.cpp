@@ -15,6 +15,8 @@ using namespace cv;
 *  Post:	frame is filtered with an edge detection filter
 */
 void EdgyFrameHandler::handleFrame(cv::Mat &frame, const int &keyPressed, const char *windowName) {
+	// Blur to reduce noise
 	GaussianBlur(frame, frame, Size(7, 7), 2.0, 2.0);
+	// Apply filter
 	Canny(frame, frame, 20, 60);
 }

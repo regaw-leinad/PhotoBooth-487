@@ -1,20 +1,30 @@
+/*
+	DrawFrameHandler
+	Author: Dan Wager
+
+	A FrameHandler that allows drawing on top of the frame.
+	When the drawing is complete, it will follow the face around.
+*/
+
 #pragma once
 
-#include "FrameHandler.h"
+#include "FaceDetectionFrameHandler.h"
+#include "Drawing.h"
 #include <vector>
 
-class DrawFrameHandler : public FrameHandler {
+class DrawFrameHandler : public FaceDetectionFrameHandler {
 public:
 	DrawFrameHandler();
 	~DrawFrameHandler() {}
 
 	/*
-	*  Handles a frame of the webcam capture with face detection
+	*  Handles a frame of the webcam capture with face detection. Handles the rendering 
+	*  of the drawings.
 	*  Pre:		faces is a valid vector containing faces
 	*  Post:	a rectangle is drawn around all the detected faces
 	*/
-	//void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, const std::vector<Face> &faces, const char *windowName);
-	void handleFrame(cv::Mat &frame, const int &keyPressed, const char *windowName);
+	void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, const std::vector<Face> &faces, const char *windowName);
+	
 	/*
 	*  Handles mouse move events
 	*  Pre:		eventCode must be a valid MouseEvent code
@@ -30,11 +40,12 @@ public:
 	std::string getName() const;
 
 private:
-	std::vector<cv::Rect> rectangles;
-	cv::Rect currentRect;
-	cv::Point2d p1;
-	cv::Point2d p2;
+	Drawing currentDrawing;
+	std::vector<Drawing> drawings;
+
+	// Is the mouse down or not
 	bool mouseDown;
-	int dX, dY;
+	int faceX;
+	int faceY;
 };
 
