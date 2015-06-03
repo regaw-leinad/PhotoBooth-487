@@ -45,6 +45,9 @@
     <ClCompile Include="ImageOverlayFrameHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EdgyFrameHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="lbpcascade_frontalface.xml">
@@ -58,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="cap.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="top.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -96,6 +102,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ImageOverlayFrameHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgyFrameHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

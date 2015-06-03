@@ -28,12 +28,12 @@ void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &k
 		Rect face = faces[i].getFace();
 
 		int baseline = 0;
-		Size textSize = getTextSize(this->text, FONT_HERSHEY_COMPLEX_SMALL, 1.0, 3, &baseline);
+		Size textSize = getTextSize(this->text, FONT_HERSHEY_COMPLEX_SMALL, 1.5, 2, &baseline);
 
 		int xOffset = (face.x + textSize.width / 2) - (face.x + face.width / 2);
 		Point newPoint(face.x - xOffset, face.y + 25);
 
-		putText(frame, this->text, newPoint, FONT_HERSHEY_COMPLEX_SMALL, 1.0, Scalar(0, 0, 255), 3);
+		putText(frame, this->text, newPoint, FONT_HERSHEY_COMPLEX_SMALL, 1.5, Scalar(0, 0, 255), 2);
 	}
 }
 

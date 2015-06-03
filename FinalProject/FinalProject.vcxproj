@@ -81,6 +81,7 @@
     <None Include="OpenCV_Debug.props" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EdgyFrameHandler.cpp" />
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FaceBoxFrameHandler.cpp" />
     <ClCompile Include="FaceDetectionFrameHandler.cpp" />
@@ -97,9 +98,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="cap.png" />
+    <Image Include="top.png" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DummyFrameHandler.h" />
+    <ClInclude Include="EdgyFrameHandler.h" />
     <ClInclude Include="Face.h" />
     <ClInclude Include="FaceBoxFrameHandler.h" />
     <ClInclude Include="FaceDetectionFrameHandler.h" />
