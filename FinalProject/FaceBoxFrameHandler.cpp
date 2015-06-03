@@ -13,10 +13,6 @@ void FaceBoxFrameHandler::handleFaceDetectionFrame(Mat &frame, const int &keyPre
 	}
 }
 
-void FaceBoxFrameHandler::onMouseEvent(int eventCode, int x, int y, int flags) {
-	cout << "FaceBoxFrameHandler Mouse Event" << endl;
-}
-
 string FaceBoxFrameHandler::getName() const {
 	return "Face Box";
 }
