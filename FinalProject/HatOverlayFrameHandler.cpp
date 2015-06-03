@@ -9,8 +9,8 @@
 #include "HatOverlayFrameHandler.h"
 #include <iostream>
 
-using namespace cv;
 using namespace std;
+using namespace cv;
 
 /*
 *  Handles a frame of the webcam capture with face detection

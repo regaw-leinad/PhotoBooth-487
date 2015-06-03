@@ -55,4 +55,3 @@ private:
 	std::vector<cv::Point> points;
 	cv::Point pivot;
 };
-

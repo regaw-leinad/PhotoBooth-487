@@ -26,4 +26,3 @@ private:
 	// The face Rect
 	cv::Rect face;
 };
-

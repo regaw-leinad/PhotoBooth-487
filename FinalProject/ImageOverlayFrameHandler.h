@@ -37,4 +37,3 @@ protected:
 	cv::Mat image;
 	bool loaded;
 };
-

@@ -14,7 +14,6 @@
 using namespace std;
 using namespace cv;
 
-
 FaceDetectionFrameHandler::FaceDetectionFrameHandler() {
 	// Load the haar cascase for facial detection
 	if (!this->faceCascade.load(FACE_CASCADE_NAME)) {
@@ -56,4 +55,3 @@ void FaceDetectionFrameHandler::handleFrame(cv::Mat &frame, const int &keyPresse
 		handleFaceDetectionFrame(frame, keyPressed, faces, windowName);
 	}
 }
-

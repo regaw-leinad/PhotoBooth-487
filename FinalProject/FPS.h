@@ -20,4 +20,3 @@ private:
 	static double averageFps;
 	static double fps1Sec;
 };
-

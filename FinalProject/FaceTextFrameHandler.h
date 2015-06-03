@@ -33,4 +33,3 @@ private:
 	// The text to draw on each frame
 	std::string text;
 };
-

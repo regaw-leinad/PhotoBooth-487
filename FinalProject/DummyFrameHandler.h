@@ -8,6 +8,7 @@
 #pragma once
 
 #include "FrameHandler.h"
+
 #include <string>
 
 class DummyFrameHandler : public FrameHandler {
@@ -31,4 +32,3 @@ public:
 		return "Default";
 	}
 };
-

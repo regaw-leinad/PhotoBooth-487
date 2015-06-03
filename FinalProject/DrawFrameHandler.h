@@ -10,6 +10,7 @@
 
 #include "FaceDetectionFrameHandler.h"
 #include "Drawing.h"
+
 #include <vector>
 
 class DrawFrameHandler : public FaceDetectionFrameHandler {
@@ -48,4 +49,3 @@ private:
 	int faceX;
 	int faceY;
 };
-

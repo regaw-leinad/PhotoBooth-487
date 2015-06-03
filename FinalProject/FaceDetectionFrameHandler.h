@@ -40,4 +40,3 @@ private:
 	// The face detectoin cascade
 	cv::CascadeClassifier faceCascade;
 };
-

@@ -1,5 +1,5 @@
 /*
-	Keys
+	PhotoBooth487
 	Author: Dan Wager
 
 	This is the main class that drives the application.
@@ -19,7 +19,17 @@ public:
 	// The name of the window's title
 	static const char *WINDOW_NAME;
 
+	/*
+	*  Constructor
+	*  Pre:		None
+	*  Post:	Photobooth is initialized
+	*/
 	PhotoBooth487(const int &camWidth, const int &camHeight);
+
+	/*
+	*  Destructor
+	*  Frees up webcam capture device if loaded
+	*/
 	~PhotoBooth487();
 
 	/*
@@ -67,4 +77,3 @@ private:
 	*/
 	static void onMouseEvent(int eventCode, int x, int y, int flags, void *param);
 };
-

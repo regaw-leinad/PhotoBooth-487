@@ -8,6 +8,7 @@
 #pragma once
 
 #include "FrameHandler.h"
+
 #include <string>
 
 class LaplacianFilterFrameHandler : public FrameHandler {
