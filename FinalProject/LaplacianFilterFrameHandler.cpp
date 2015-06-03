@@ -1,3 +1,10 @@
+/*
+	LaplacianFilterFrameHandler
+	Author: Dan Wager
+
+	This class filters a frame with a Laplacian filter
+*/
+
 #include "LaplacianFilterFrameHandler.h"
 
 using namespace cv;

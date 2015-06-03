@@ -9,7 +9,7 @@ public:
 	HatOverlayFrameHandler(const std::string &hatFilePath) : ImageOverlayFrameHandler(hatFilePath) {}
 	~HatOverlayFrameHandler() {}
 
-	void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<Face> faces, const char *windowName);
+	void handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, const std::vector<Face> &faces, const char *windowName);
 	
 	std::string getName() const;
 };

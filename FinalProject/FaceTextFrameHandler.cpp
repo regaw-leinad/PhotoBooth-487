@@ -8,7 +8,7 @@ FaceTextFrameHandler::FaceTextFrameHandler() {
 	this->text = "";
 }
 
-void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<Face> faces, const char *windowName) {
+void FaceTextFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, const std::vector<Face> &faces, const char *windowName) {
 	if (keyPressed == Keys::KEY_DELETE) {
 		if (this->text.length() > 0) {
 			this->text = this->text.substr(0, text.length() - 1);

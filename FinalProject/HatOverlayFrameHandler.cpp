@@ -1,10 +1,12 @@
+
+
 #include "HatOverlayFrameHandler.h"
 #include <iostream>
 
 using namespace cv;
 using namespace std;
 
-void HatOverlayFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, std::vector<Face> faces, const char *windowName) {
+void HatOverlayFrameHandler::handleFaceDetectionFrame(cv::Mat &frame, const int &keyPressed, const std::vector<Face> &faces, const char *windowName) {
 	if (!this->loaded) {
 		return;
 	}

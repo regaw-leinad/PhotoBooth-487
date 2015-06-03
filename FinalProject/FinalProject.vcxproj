@@ -81,7 +81,7 @@
     <None Include="OpenCV_Debug.props" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ColorFilterFrameHandler.cpp" />
+    <ClCompile Include="LaplacianFilterFrameHandler.cpp" />
     <ClCompile Include="EdgyFrameHandler.cpp" />
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FaceBoxFrameHandler.cpp" />
@@ -92,7 +92,6 @@
     <ClCompile Include="ImageOverlayFrameHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhotoBooth487.cpp" />
-    <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="lbpcascade_frontalface.xml" />
@@ -102,7 +101,7 @@
     <Image Include="top.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ColorFilterFrameHandler.h" />
+    <ClInclude Include="LaplacianFilterFrameHandler.h" />
     <ClInclude Include="DummyFrameHandler.h" />
     <ClInclude Include="EdgyFrameHandler.h" />
     <ClInclude Include="Face.h" />
@@ -115,7 +114,6 @@
     <ClInclude Include="ImageOverlayFrameHandler.h" />
     <ClInclude Include="Keys.h" />
     <ClInclude Include="PhotoBooth487.h" />
-    <ClInclude Include="Util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
