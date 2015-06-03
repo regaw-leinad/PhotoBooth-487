@@ -81,6 +81,8 @@
     <None Include="OpenCV_Debug.props" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DrawFrameHandler.cpp" />
+    <ClCompile Include="Drawing.cpp" />
     <ClCompile Include="LaplacianFilterFrameHandler.cpp" />
     <ClCompile Include="EdgyFrameHandler.cpp" />
     <ClCompile Include="Face.cpp" />
@@ -101,6 +103,8 @@
     <Image Include="top.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DrawFrameHandler.h" />
+    <ClInclude Include="Drawing.h" />
     <ClInclude Include="LaplacianFilterFrameHandler.h" />
     <ClInclude Include="DummyFrameHandler.h" />
     <ClInclude Include="EdgyFrameHandler.h" />

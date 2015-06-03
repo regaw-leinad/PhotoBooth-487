@@ -5,6 +5,7 @@
 #include "HatOverlayFrameHandler.h"
 #include "EdgyFrameHandler.h"
 #include "LaplacianFilterFrameHandler.h"
+#include "DrawFrameHandler.h"
 
 #include "FPS.h"
 
@@ -56,7 +57,7 @@ void PhotoBooth487::initHandlers() {
 	this->frameHandlers[Keys::KEY_NUM_4] = new HatOverlayFrameHandler("top.png");
 	this->frameHandlers[Keys::KEY_NUM_5] = new EdgyFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_6] = new LaplacianFilterFrameHandler;
-	this->frameHandlers[Keys::KEY_NUM_7] = currentFrameHandler;
+	this->frameHandlers[Keys::KEY_NUM_7] = new DrawFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_8] = currentFrameHandler;
 	this->frameHandlers[Keys::KEY_NUM_9] = currentFrameHandler;
 }
