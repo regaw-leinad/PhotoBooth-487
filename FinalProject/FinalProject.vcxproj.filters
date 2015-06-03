@@ -39,6 +39,12 @@
     <ClCompile Include="FPS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HatOverlayFrameHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageOverlayFrameHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="lbpcascade_frontalface.xml">
@@ -84,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FPS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HatOverlayFrameHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageOverlayFrameHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

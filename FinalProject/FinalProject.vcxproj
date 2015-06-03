@@ -84,8 +84,10 @@
     <ClCompile Include="Face.cpp" />
     <ClCompile Include="FaceBoxFrameHandler.cpp" />
     <ClCompile Include="FaceDetectionFrameHandler.cpp" />
+    <ClCompile Include="HatOverlayFrameHandler.cpp" />
     <ClCompile Include="FaceTextFrameHandler.cpp" />
     <ClCompile Include="FPS.cpp" />
+    <ClCompile Include="ImageOverlayFrameHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhotoBooth487.cpp" />
     <ClCompile Include="Util.cpp" />
@@ -101,9 +103,11 @@
     <ClInclude Include="Face.h" />
     <ClInclude Include="FaceBoxFrameHandler.h" />
     <ClInclude Include="FaceDetectionFrameHandler.h" />
+    <ClInclude Include="HatOverlayFrameHandler.h" />
     <ClInclude Include="FaceTextFrameHandler.h" />
     <ClInclude Include="FPS.h" />
     <ClInclude Include="FrameHandler.h" />
+    <ClInclude Include="ImageOverlayFrameHandler.h" />
     <ClInclude Include="Keys.h" />
     <ClInclude Include="PhotoBooth487.h" />
     <ClInclude Include="Util.h" />
